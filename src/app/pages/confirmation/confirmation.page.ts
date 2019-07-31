@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NavController } from '@ionic/angular';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-confirmation',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ConfirmationPage implements OnInit {
 
-  constructor() { }
+  constructor(private navCntrl : NavController, private router : Router) { 
+    setTimeout(() => {
+      this.navCntrl.pop();
+    }, 2000)
+  }
 
   ngOnInit() {
+  }
+
+  goHome(){
+    this.router.navigate(['/home']);
   }
 
 }

@@ -1,9 +1,22 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>home</ion-title>
+    <ion-title>DigiFood</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+    <div class="container">
+        <div class="header">
+          <h2>Welcome to DigiFood</h2>
+          <p>
+            You can order food at anytime!
+          </p>
+          <ion-button (click)="_onChoose('classic')" class="button">
+            <label>Classic</label>
+          </ion-button>
+          <ion-button (click)="_onChoose('italian')" class="button">
+              <label>Italian</label>
+            </ion-button>
+        </div>
+      </div>
 </ion-content>

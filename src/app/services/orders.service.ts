@@ -4,6 +4,17 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class OrdersService {
+  private allOrders = []
 
   constructor() { }
+
+  newOrder(order){
+    this.allOrders.push(order);
+  }
+
+  getOrders(){
+    return this.allOrders;
+  }
+
+  
 }
